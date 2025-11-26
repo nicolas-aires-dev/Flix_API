@@ -5,7 +5,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),    
 
     #Authentication
-    path('api/v1/', include('authentication.urls')),
+    path('api/v1/auth/', include('authentication.urls')),
 
     #Apps
     path('api/v1/actors/', include('actors.urls')),
