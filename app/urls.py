@@ -2,12 +2,12 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),    
+    path('admin/', admin.site.urls),
 
-    #Authentication
+#   Authentication
     path('api/v1/auth/', include('authentication.urls')),
 
-    #Apps
+#   Apps
     path('api/v1/actors/', include('actors.urls')),
     path('api/v1/genres/', include('genres.urls')),
     path('api/v1/movies/', include('movies.urls')),

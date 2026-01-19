@@ -6,11 +6,12 @@ from app.permissions import GlobalDefaultPermission
 
 
 class GenreCreateListView(generics.ListCreateAPIView):
-    permission_classes = (IsAuthenticated, GlobalDefaultPermission,)    
+    permission_classes = (IsAuthenticated, GlobalDefaultPermission,)
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
 
+
 class GenreRetrieveUpdateDeleteView(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = (IsAuthenticated, GlobalDefaultPermission,)    
+    permission_classes = (IsAuthenticated, GlobalDefaultPermission,)
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
